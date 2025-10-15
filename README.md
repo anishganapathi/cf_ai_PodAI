@@ -410,35 +410,6 @@ export const DEBUG = true;
 
 ---
 
-## 📊 Performance
-
-### Benchmarks
-
-- **Article Processing**: ~15-25 seconds
-- **Audio Generation**: ~10-15 seconds  
-- **Total Time**: ~25-40 seconds
-- **File Size**: ~2-5MB per podcast
-- **Storage**: Unlimited (Cloudflare R2)
-
-### Optimization Tips
-
-1. **Caching**: Podcasts are cached by URL
-2. **Parallel Processing**: Scraping and AI processing run in parallel
-3. **Audio Compression**: Optimized MP3 encoding
-4. **CDN**: Audio served via Cloudflare CDN
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes**
-4. **Test thoroughly**
-5. **Submit a pull request**
-
 ### Development Guidelines
 
 - Follow existing code style
@@ -464,18 +435,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- **Email**: support@podai.com
-
----
-
 <div align="center">
 
-**Made with ❤️ by the PodAI Team**
+**Made with ❤️ by the Anish Ganapathi**
 
-[⭐ Star this repo](https://github.com/your-repo) | [🐛 Report Bug](https://github.com/your-repo/issues) | [💡 Request Feature](https://github.com/your-repo/issues)
+[⭐ Star this repo](https://github.com/anishganapathi/PodAI) | [🐛 Report Bug](https://github.com/anishganapathi/PodAI/issues) | [💡 Request Feature](https://github.com/anishganapathi/PodAI/issues)
 
 </div>
