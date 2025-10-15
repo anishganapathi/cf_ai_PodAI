@@ -18,15 +18,15 @@
 
 ## 🌟 Features
 
-- 🚀 **Instant Conversion**: Transform news articles into podcasts in under 30 seconds
-- 🎵 **High-Quality Audio**: Powered by ElevenLabs AI voice synthesis
-- 🧠 **Smart Summarization**: Cloudflare Workers AI processes content intelligently
-- 📱 **Chrome Extension**: Seamless browser integration
-- 💾 **Auto-Save**: Podcasts automatically saved to Recent Podcasts
-- 🎨 **Modern UI**: Clean, responsive design with Syne typography
-- 🔄 **Real-time Progress**: Live updates during generation
-- 📊 **Volume Control**: Dynamic color-coded volume slider
-- 🌐 **Website Detection**: Shows source website and time ago
+- **Instant Conversion**: Transform news articles into podcasts in under 30 seconds
+- **High-Quality Audio**: Powered by ElevenLabs AI voice synthesis
+- **Smart Summarization**: Cloudflare Workers AI processes content intelligently
+- **Chrome Extension**: Seamless browser integration
+- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
+- **Modern UI**: Clean, responsive design with Syne typography
+- **Real-time Progress**: Live updates during generation
+- **Volume Control**: Dynamic color-coded volume slider
+- **Website Detection**: Shows source website and time ago
 
 ---
 
@@ -56,7 +56,7 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -220,6 +220,67 @@ CREATE TABLE IF NOT EXISTS processing_logs (
 - **Dynamic Colors**: Volume slider changes color based on level
 - **Responsive Layout**: Works perfectly in extension popup
 - **Smooth Animations**: Framer Motion powered transitions
+
+---
+
+## 📸 Application Screenshots
+
+### 🎯 How PodAI Works in Action
+
+Here's a visual walkthrough of PodAI transforming news articles into podcasts:
+
+#### Step 1: Extension Interface
+![PodAI Extension Interface](assets/Working-1.png)
+
+**What you see:**
+- Clean, modern Chrome extension popup interface
+- PodAI logo and branding
+- "Generate Podcast" button ready for action
+- Current website detection showing the source
+- Recent Podcasts section for easy access to previous conversions
+
+**How it works:**
+1. Navigate to any news article in your browser
+2. Click the PodAI extension icon in your toolbar
+3. The extension automatically detects the current webpage
+4. Click "Generate Podcast" to start the conversion process
+
+#### Step 2: Podcast Generation & Player
+![PodAI Podcast Player](assets/Working-2.png)
+
+**What you see:**
+- Real-time progress indicator showing generation status
+- Professional podcast player with play/pause controls
+- Dynamic progress bar with current playback position
+- Volume control with color-coded slider (red/yellow/green)
+- Time display showing current time and total duration
+- Download button to save the podcast as MP3
+- Article title and summary displayed above the player
+
+**How it works:**
+1. The extension scrapes the article content
+2. Cloudflare Workers AI processes and summarizes the content
+3. ElevenLabs TTS converts the summary to high-quality audio
+4. The audio is automatically saved to Cloudflare R2 storage
+5. The podcast player loads and is ready for immediate playback
+
+### 🔄 Complete Workflow
+
+```
+📰 News Article → 🧠 AI Processing → 🎙️ Podcast Generation → 🎵 Audio Player
+     ↓                    ↓                    ↓                    ↓
+1. Click Extension    2. Content Scraping   3. TTS Conversion    4. Instant Playback
+   Icon                 & Summarization      & Storage            & Download
+```
+
+### ✨ Key Features Demonstrated
+
+- **Instant Conversion**: From article to podcast in under 30 seconds
+- **High-Quality Audio**: Professional-grade voice synthesis
+- **Smart UI**: Intuitive controls with visual feedback
+- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
+- **Modern Design**: Clean, professional interface
+- **Real-time Updates**: Live progress indicators during generation
 
 ---
 
