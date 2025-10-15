@@ -16,7 +16,7 @@
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Instant Conversion**: Transform news articles into podcasts in under 30 seconds
 - **High-Quality Audio**: Powered by ElevenLabs AI voice synthesis
@@ -30,7 +30,69 @@
 
 ---
 
-## 🏗️ Architecture
+## Application Screenshots
+
+### How PodAI Works in Action
+
+Here's a visual walkthrough of PodAI transforming news articles into podcasts:
+
+#### Step 1: Extension Interface
+![PodAI Extension Interface](assets/Working-1.png)
+
+**What you see:**
+- Clean, modern Chrome extension popup interface
+- PodAI logo and branding
+- "Generate Podcast" button ready for action
+- Current website detection showing the source
+- Recent Podcasts section for easy access to previous conversions
+
+**How it works:**
+1. Navigate to any news article in your browser
+2. Click the PodAI extension icon in your toolbar
+3. The extension automatically detects the current webpage
+4. Click "Generate Podcast" to start the conversion process
+
+#### Step 2: Podcast Generation & Player
+![PodAI Podcast Player](assets/Working-2.png)
+
+**What you see:**
+- Real-time progress indicator showing generation status
+- Professional podcast player with play/pause controls
+- Dynamic progress bar with current playback position
+- Volume control with color-coded slider (red/yellow/green)
+- Time display showing current time and total duration
+- Download button to save the podcast as MP3
+- Article title and summary displayed above the player
+
+**How it works:**
+1. The extension scrapes the article content
+2. Cloudflare Workers AI processes and summarizes the content
+3. ElevenLabs TTS converts the summary to high-quality audio
+4. The audio is automatically saved to Cloudflare R2 storage
+5. The podcast player loads and is ready for immediate playback
+
+### Complete Workflow
+
+```
+News Article → AI Processing → Podcast Generation → Audio Player
+     ↓              ↓              ↓              ↓
+1. Click Extension  2. Content     3. TTS         4. Instant
+   Icon             Scraping       Conversion     Playback
+                    & Summarization & Storage      & Download
+```
+
+### Key Features Demonstrated
+
+- **Instant Conversion**: From article to podcast in under 30 seconds
+- **High-Quality Audio**: Professional-grade voice synthesis
+- **Smart UI**: Intuitive controls with visual feedback
+- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
+- **Modern Design**: Clean, professional interface
+- **Real-time Updates**: Live progress indicators during generation
+
+---
+
+## Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -65,7 +127,7 @@
 - Cloudflare Account
 - ElevenLabs Account
 
-### 1️⃣ Backend Setup (Cloudflare Workers)
+### Backend Setup (Cloudflare Workers)
 
 ```bash
 # Navigate to backend directory
@@ -111,7 +173,7 @@ npm run deploy
 npm run init-db
 ```
 
-### 2️⃣ Frontend Setup (Chrome Extension)
+### Frontend Setup (Chrome Extension)
 
 ```bash
 # Navigate to frontend directory
@@ -128,17 +190,17 @@ export const WORKER_URL = 'https://your-worker.your-subdomain.workers.dev';
 npm run build
 ```
 
-### 3️⃣ Chrome Extension Installation
+### Chrome Extension Installation
 
 1. Open Chrome and go to `chrome://extensions/`
 2. Enable **Developer Mode** (toggle in top-right)
 3. Click **Load unpacked**
 4. Select the `Cloudflare-Frontend/out` directory
-5. 🎉 PodAI extension is now installed!
+5. PodAI extension is now installed!
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -191,9 +253,9 @@ CREATE TABLE IF NOT EXISTS processing_logs (
 
 ---
 
-## 📖 Usage Guide
+## Usage Guide
 
-### 🎯 How to Use PodAI
+### How to Use PodAI
 
 1. **Navigate to any news article** in your Chrome browser
 2. **Click the PodAI extension icon** in your toolbar
@@ -204,7 +266,7 @@ CREATE TABLE IF NOT EXISTS processing_logs (
    - Auto-save to Recent Podcasts
 4. **Play your podcast** directly in the extension or download it
 
-### 🎵 Podcast Player Features
+### Podcast Player Features
 
 - **Play/Pause Controls**: Click the play button to start/stop
 - **Progress Bar**: Shows current position and total duration
@@ -213,7 +275,7 @@ CREATE TABLE IF NOT EXISTS processing_logs (
 - **Download**: Save podcast as MP3 file
 - **Recent Podcasts**: View and replay previous podcasts
 
-### 🎨 UI Features
+### UI Features
 
 - **Modern Design**: Clean, professional interface
 - **Syne Typography**: Custom font family for better readability
@@ -223,68 +285,7 @@ CREATE TABLE IF NOT EXISTS processing_logs (
 
 ---
 
-## 📸 Application Screenshots
-
-### 🎯 How PodAI Works in Action
-
-Here's a visual walkthrough of PodAI transforming news articles into podcasts:
-
-#### Step 1: Extension Interface
-![PodAI Extension Interface](assets/Working-1.png)
-
-**What you see:**
-- Clean, modern Chrome extension popup interface
-- PodAI logo and branding
-- "Generate Podcast" button ready for action
-- Current website detection showing the source
-- Recent Podcasts section for easy access to previous conversions
-
-**How it works:**
-1. Navigate to any news article in your browser
-2. Click the PodAI extension icon in your toolbar
-3. The extension automatically detects the current webpage
-4. Click "Generate Podcast" to start the conversion process
-
-#### Step 2: Podcast Generation & Player
-![PodAI Podcast Player](assets/Working-2.png)
-
-**What you see:**
-- Real-time progress indicator showing generation status
-- Professional podcast player with play/pause controls
-- Dynamic progress bar with current playback position
-- Volume control with color-coded slider (red/yellow/green)
-- Time display showing current time and total duration
-- Download button to save the podcast as MP3
-- Article title and summary displayed above the player
-
-**How it works:**
-1. The extension scrapes the article content
-2. Cloudflare Workers AI processes and summarizes the content
-3. ElevenLabs TTS converts the summary to high-quality audio
-4. The audio is automatically saved to Cloudflare R2 storage
-5. The podcast player loads and is ready for immediate playback
-
-### 🔄 Complete Workflow
-
-```
-📰 News Article → 🧠 AI Processing → 🎙️ Podcast Generation → 🎵 Audio Player
-     ↓                    ↓                    ↓                    ↓
-1. Click Extension    2. Content Scraping   3. TTS Conversion    4. Instant Playback
-   Icon                 & Summarization      & Storage            & Download
-```
-
-### ✨ Key Features Demonstrated
-
-- **Instant Conversion**: From article to podcast in under 30 seconds
-- **High-Quality Audio**: Professional-grade voice synthesis
-- **Smart UI**: Intuitive controls with visual feedback
-- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
-- **Modern Design**: Clean, professional interface
-- **Real-time Updates**: Live progress indicators during generation
-
----
-
-## 🛠️ Development
+## Development
 
 ### Backend Development
 
@@ -356,7 +357,7 @@ CloudFlare/
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### Backend Endpoints
 
@@ -415,7 +416,7 @@ Serve audio files.
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Changing the Voice
 
@@ -441,7 +442,7 @@ Edit `src/styles/globals.css` to customize:
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -480,13 +481,13 @@ export const DEBUG = true;
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Cloudflare Workers** for serverless backend
 - **ElevenLabs** for AI voice synthesis
@@ -500,6 +501,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ by the Anish Ganapathi**
 
-[⭐ Star this repo](https://github.com/anishganapathi/PodAI) | [🐛 Report Bug](https://github.com/anishganapathi/PodAI/issues) | [💡 Request Feature](https://github.com/anishganapathi/PodAI/issues)
+[Star this repo](https://github.com/anishganapathi/PodAI) | [Report Bug](https://github.com/anishganapathi/PodAI/issues) | [Request Feature](https://github.com/anishganapathi/PodAI/issues)
 
 </div>
