@@ -1,0 +1,40 @@
+name = "podcast-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers AI binding for Llama 3.3
+[ai]
+binding = "AI"
+
+# D1 database for podcast storage
+[[d1_databases]]
+binding = "PODCAST_DB"
+database_name = "podcast-database"
+database_id = "7eefb2b8-8bb9-493f-b750-e4b8009ee0ef"
+preview_database_id = "your-preview-database-id-here"
+
+# R2 bucket for audio files
+[[r2_buckets]]
+binding = "AUDIO_BUCKET"
+bucket_name = "podcast-audio"
+preview_bucket_name = "podcast-audio"
+
+# Workflow configuration
+[[workflows]]
+binding = "PODCAST_WORKFLOW"
+name = "podcast-workflow"
+class_name = "PodcastWorkflow"
+
+# Environment variables
+[vars]
+ALLOWED_ORIGINS = "*"
+ELEVENLABS_API_KEY = "8037ff7f065f6e98d868937a2eac32dcdf985a29bc4ef0a62fb8b1b4c69698eb"
+ELEVENLABS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
+
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
