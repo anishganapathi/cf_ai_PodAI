@@ -1,5 +1,5 @@
 
-# 🎙️ PodAI - News to Podcast Converter
+# PodAI - News to Podcast Converter
 
 <div align="center">
 
@@ -499,7 +499,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ by the Anish Ganapathi**
+**Developed with ❤️ by the Anish Ganapathi**
 
 [Star this repo](https://github.com/anishganapathi/PodAI) | [Report Bug](https://github.com/anishganapathi/PodAI/issues) | [Request Feature](https://github.com/anishganapathi/PodAI/issues)
 
