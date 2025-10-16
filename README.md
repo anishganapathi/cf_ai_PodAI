@@ -149,7 +149,7 @@ compatibility_date = "2024-01-01"
 [vars]
 ALLOWED_ORIGINS = "*"
 ELEVENLABS_API_KEY = "your-elevenlabs-api-key"
-ELEVENLABS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
+ELEVENLABS_VOICE_ID = "your-preferred-voice-id"
 
 [[r2_buckets]]
 binding = "AUDIO_BUCKET"
