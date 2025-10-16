@@ -94,27 +94,7 @@ News Article → AI Processing → Podcast Generation → Audio Player
 
 ## Architecture
 
-```
-┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   Chrome        │    │   Cloudflare     │    │   ElevenLabs    │
-│   Extension     │◄──►│   Workers        │◄──►│   TTS API       │
-│   (Frontend)    │    │   (Backend)      │    │   (Audio)       │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       ▼                       │
-         │              ┌──────────────────┐             │
-         │              │   Cloudflare     │             │
-         └─────────────►│   Workers AI     │◄────────────┘
-                        │   (Summarization)│
-                        └──────────────────┘
-                                 │
-                                 ▼
-                        ┌──────────────────┐
-                        │   Cloudflare     │
-                        │   R2 Storage     │
-                        │   (Audio Files)  │
-                        └──────────────────┘
-```
+![PodAI Workflow](assets/Workflow.png)
 
 ---
 
