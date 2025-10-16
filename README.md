@@ -16,20 +16,6 @@
 
 ---
 
-## Features
-
-- **Instant Conversion**: Transform news articles into podcasts in under 30 seconds
-- **High-Quality Audio**: Powered by ElevenLabs AI voice synthesis
-- **Smart Summarization**: Cloudflare Workers AI processes content intelligently
-- **Chrome Extension**: Seamless browser integration
-- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
-- **Modern UI**: Clean, responsive design with Syne typography
-- **Real-time Progress**: Live updates during generation
-- **Volume Control**: Dynamic color-coded volume slider
-- **Website Detection**: Shows source website and time ago
-
----
-
 ## Application Screenshots
 
 ### How PodAI Works in Action
@@ -70,6 +56,22 @@ Here's a visual walkthrough of PodAI transforming news articles into podcasts:
 3. ElevenLabs TTS converts the summary to high-quality audio
 4. The audio is automatically saved to Cloudflare R2 storage
 5. The podcast player loads and is ready for immediate playback
+
+---
+
+## Features
+
+- **Instant Conversion**: Transform news articles into podcasts in under 30 seconds
+- **High-Quality Audio**: Powered by ElevenLabs AI voice synthesis
+- **Smart Summarization**: Cloudflare Workers AI processes content intelligently
+- **Chrome Extension**: Seamless browser integration
+- **Auto-Save**: Podcasts automatically saved to Recent Podcasts
+- **Modern UI**: Clean, responsive design with Syne typography
+- **Real-time Progress**: Live updates during generation
+- **Volume Control**: Dynamic color-coded volume slider
+- **Website Detection**: Shows source website and time ago
+
+---
 
 ### Complete Workflow
 
@@ -499,7 +501,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Developed with ❤️ by the Anish Ganapathi**
+**Developed by the Anish Ganapathi**
 
 [Star this repo](https://github.com/anishganapathi/PodAI) | [Report Bug](https://github.com/anishganapathi/PodAI/issues) | [Request Feature](https://github.com/anishganapathi/PodAI/issues)
 
