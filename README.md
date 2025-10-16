@@ -1,5 +1,5 @@
 
-# PodAI - News to Podcast Converter
+# PodAI - Articles to Podcast 
 
 <div align="center">
 
