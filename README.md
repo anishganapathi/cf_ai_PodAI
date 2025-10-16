@@ -209,7 +209,7 @@ npm run build
 [vars]
 ALLOWED_ORIGINS = "*"                    # CORS origins
 ELEVENLABS_API_KEY = "sk-..."           # Your ElevenLabs API key
-ELEVENLABS_VOICE_ID = "21m00Tcm4TlvDq8ikWAM"  # Voice ID
+ELEVENLABS_VOICE_ID = "your-preferred-voice-id"  # Voice ID
 ```
 
 #### Frontend (`src/lib/constants.js`)
